@@ -24,4 +24,9 @@ class JaarTest {
     void eenJaarNietDeelbaarDoor4IsGeenSchrikkeljaar() {
         assertThat(new Jaar(2015).isSchrikkeljaar()).isFalse();
     }
+
+    @Test
+    void toStringGeeftHetJaarAlsTekst(){
+        assertThat(new Jaar(2015)).hasToString("2015");
+    }
 }
