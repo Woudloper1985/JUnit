@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>be.vdab</groupId>
-    <artifactId>JUnit</artifactId>
+    <artifactId>JUnitProject</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
