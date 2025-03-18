@@ -1,4 +1,4 @@
-package be.vdab;
+package be.vdab.theorie;
 
 public class Jaar {
     private final int jaar;

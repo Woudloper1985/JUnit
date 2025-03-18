@@ -1,4 +1,4 @@
-package be.vdab;
+package be.vdab.taken;
 
 class Woord {
     private final String woord;

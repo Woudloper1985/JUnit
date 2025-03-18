@@ -1,4 +1,4 @@
-package be.vdab;
+package be.vdab.taken;
 
 import org.junit.jupiter.api.Test;
 
