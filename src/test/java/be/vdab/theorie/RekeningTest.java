@@ -5,11 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 class RekeningTest {
     private Rekening rekening;
-
 
     @BeforeEach
     void beforeEach() {
@@ -32,5 +31,23 @@ class RekeningTest {
         rekening.stort(BigDecimal.TEN);
         rekening.stort(BigDecimal.ONE);
         assertThat(rekening.getSaldo()).isEqualByComparingTo("11");
+    }
+
+    @Test
+    void hetGestorteBedragMagNietNulZijn() {
+        assertThatIllegalArgumentException().isThrownBy(
+                () -> rekening.stort(BigDecimal.ZERO));
+    }
+
+    @Test
+    void hetGestorteBedragMagNietNegatiefZijn() {
+        assertThatIllegalArgumentException().isThrownBy(
+                () -> rekening.stort(BigDecimal.valueOf(-1)));
+    }
+
+    @Test
+    void stortMetNullKanNiet() {
+        assertThatNullPointerException().isThrownBy(
+                () -> rekening.stort(null));
     }
 }
