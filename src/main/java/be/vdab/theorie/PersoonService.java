@@ -3,7 +3,6 @@ package be.vdab.theorie;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
-import java.sql.PreparedStatement;
 
 public class PersoonService {
     private final PersoonRepository repository;
