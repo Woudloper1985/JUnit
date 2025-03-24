@@ -24,14 +24,14 @@ class PersoonServiceTest {
         service = new PersoonService(repository);
     }
 
-    @Test
-    void deWeddeStandaardAfwijkingIsPositief() {
-        when(repository.findAllWeddes()).thenReturn(
-                Stream.of(2, 4, 4, 4, 5, 5, 7, 9)
-                        .map(getal -> BigDecimal.valueOf(getal))
-                        .toList());
-        assertThat(service.standaardAfwijkingWeddes()).isPositive();
-    }
+//    @Test
+//    void deWeddeStandaardAfwijkingIsPositief() {
+//        when(repository.findAllWeddes()).thenReturn(
+//                Stream.of(2, 4, 4, 4, 5, 5, 7, 9)
+//                        .map(getal -> BigDecimal.valueOf(getal))
+//                        .toList());
+//        assertThat(service.standaardAfwijkingWeddes()).isPositive();
+//    }
 
     @Test
     void deWeddeStandaardAfwijkingIs2() {
