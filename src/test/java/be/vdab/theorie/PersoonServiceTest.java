@@ -10,11 +10,16 @@ class PersoonServiceTest {
 
     @BeforeEach
     void beforeEach() {
-        service = new PersoonService(new PersoonRepository());
+        service = new PersoonService(new PersoonRepositoryStub());
     }
 
     @Test
     void deWeddeStandaardAfwijkingIsPositief() {
         assertThat(service.standaardAfwijkingWeddes()).isPositive();
+    }
+
+    @Test
+    void deWeddeStandaardAfwijkingIs2() {
+        assertThat(service.standaardAfwijkingWeddes()).isEqualByComparingTo("2");
     }
 }
