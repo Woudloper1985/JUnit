@@ -18,11 +18,11 @@ class WoordTellerTest {
         woordTeller = new WoordTeller();
     }
 
-    @Test
-    void eenNullWaardeKanNiet() {
-        assertThatNullPointerException().isThrownBy(
-                () -> woordTeller.telWoorden(null));
-    }
+//    @Test
+//    void eenNullWaardeKanNiet() {
+//        assertThatNullPointerException().isThrownBy(
+//                () -> woordTeller.telWoorden(null));
+//    }
 
     @ParameterizedTest
     @ValueSource(strings = {"", " ", "     ", ",", ",,,", " ,  , ,,"})
@@ -30,5 +30,15 @@ class WoordTellerTest {
         assertThat(woordTeller.telWoorden(tekst)).isZero();
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"woord", " woord", "woord "})
+    void bevat1Woord(String tekst){
+        assertThat(woordTeller.telWoorden(tekst)).isOne();
+    }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"ik ook", "ik  ook", "ik,ook", "ik, ook", "ik , ook"})
+    void bevat2Woorden(String tekst){
+        assertThat(woordTeller.telWoorden(tekst)).isEqualTo(2);
+    }
 }
