@@ -1,9 +1,9 @@
 package be.vdab.taken;
 
 public class WoonplaatsService {
-    private final WoonplaatsRepository repository;
+    private final TxtWoonplaatsRepository repository;
 
-    public WoonplaatsService(WoonplaatsRepository repository) {
+    public WoonplaatsService(TxtWoonplaatsRepository repository) {
         this.repository = repository;
     }
 
