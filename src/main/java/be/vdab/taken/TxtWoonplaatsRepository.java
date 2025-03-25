@@ -7,8 +7,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-public class TxtWoonplaatsRepository {
-    List<String> findMetStreepjes() {
+public class TxtWoonplaatsRepository implements WoonplaatsRepository {
+    @Override
+    public List<String> findMetStreepjes() {
         try (var stream = Files.lines(Path.of("/Users/Nick/data/woonplaatsen.txt"))) {
             return stream
                     .filter(woonplaats -> woonplaats.contains("-"))

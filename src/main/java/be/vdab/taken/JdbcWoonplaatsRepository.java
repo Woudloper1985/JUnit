@@ -7,8 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JdbcWoonplaatsRepository extends AbstractRepository {
-    List<String> findMetStreepjes() {
+public class JdbcWoonplaatsRepository extends AbstractRepository implements WoonplaatsRepository {
+    @Override
+    public List<String> findMetStreepjes() {
         var metStreepjes = new ArrayList<String>();
         var sql = """
                     SELECT naam

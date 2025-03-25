@@ -15,7 +15,7 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 class WoonplaatsServiceTest {
     @Mock
-    private TxtWoonplaatsRepository repository;
+    private WoonplaatsRepository repository;
     private WoonplaatsService service;
 
     @BeforeEach
