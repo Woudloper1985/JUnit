@@ -16,7 +16,7 @@ class PersoonTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"Jan", "Piet", "Abdul", "Jean-Pierre", "  X     Æ A-12", "L", "i", "."})
+    @ValueSource(strings = {"Jan", "Piet", "Abdul", "Jean-Pierre  ", "  X     Æ A-12", "L", "i", "."})
     void correcteVoornamen(String voornaam) {
         assertThatCode(() -> persoon.add(voornaam)).doesNotThrowAnyException();
     }
