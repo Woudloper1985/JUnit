@@ -14,7 +14,7 @@ class Persoon {
             throw new IllegalArgumentException("Voornaam moet minstens één niet-blanco teken bevatten.");
         }
         if (voornamen.contains(voornaam)) {
-            throw new IllegalArgumentException("Voornaam mag nog niet voorkomen in de voornamen.");
+            throw new IllegalArgumentException("Voornaam " + voornaam + " komt al voor in de voornamen.");
         }
         voornamen.add(voornaam);
     }
