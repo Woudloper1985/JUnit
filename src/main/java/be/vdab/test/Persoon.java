@@ -13,12 +13,9 @@ class Persoon {
         if (voornaam.isBlank()) {
             throw new IllegalArgumentException("Voornaam moet minstens één niet-blanco teken bevatten.");
         }
-        if (voornamen.contains(voornaam)) {
+        if (!voornamen.add(voornaam)) {
             throw new IllegalArgumentException("Voornaam " + voornaam + " komt al voor in de voornamen.");
         }
-//        if (!voornamen.add(voornaam)) { // als add false teruggeeft, bestond de voornaam al
-//            throw new IllegalArgumentException("Voornaam " + voornaam + " komt al voor in de voornamen.");
-//        } --> kan ook want LinkedHashSet laat geen dubbels toe.
         voornamen.add(voornaam);
     }
 
