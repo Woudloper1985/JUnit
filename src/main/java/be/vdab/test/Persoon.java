@@ -10,8 +10,11 @@ class Persoon {
         if (voornaam == null) {
             throw new NullPointerException("Voornaam mag niet leeg zijn; je moet iets invullen.");
         }
-        if (voornaam.isBlank() || voornamen.contains(voornaam)) {
-            throw new IllegalArgumentException("Voornaam moet minstens één niet-blanco teken bevatten en mag nog niet voorkomen in de voornamen.");
+        if (voornaam.isBlank()) {
+            throw new IllegalArgumentException("Voornaam moet minstens één niet-blanco teken bevatten.");
+        }
+        if (voornamen.contains(voornaam)) {
+            throw new IllegalArgumentException("Voornaam mag nog niet voorkomen in de voornamen.");
         }
         voornamen.add(voornaam);
     }
