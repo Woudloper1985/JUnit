@@ -6,8 +6,8 @@ class Voornamen { // Productieklasse is niet nodig; is meer als extra oefening v
 
         try {
             persoon.add("Jan");
-            persoon.add("Piet");
-            persoon.add("Abdul");
+            persoon.add("Piet-Joris.!  ");
+            persoon.add("  Abdul");
             System.out.println("Voornamen: " + persoon);
             persoon.add("Jan"); // Test dubbele naam
         } catch (IllegalArgumentException ex) {
