@@ -16,7 +16,6 @@ class Persoon {
         if (!voornamen.add(voornaam)) {
             throw new IllegalArgumentException("Voornaam " + voornaam + " komt al voor in de voornamen.");
         }
-        voornamen.add(voornaam);
     }
 
     @Override
