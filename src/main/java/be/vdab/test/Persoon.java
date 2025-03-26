@@ -16,6 +16,9 @@ class Persoon {
         if (voornamen.contains(voornaam)) {
             throw new IllegalArgumentException("Voornaam " + voornaam + " komt al voor in de voornamen.");
         }
+//        if (!voornamen.add(voornaam)) { // als add false teruggeeft, bestond de voornaam al
+//            throw new IllegalArgumentException("Voornaam " + voornaam + " komt al voor in de voornamen.");
+//        } --> kan ook want LinkedHashSet laat geen dubbels toe.
         voornamen.add(voornaam);
     }
 
