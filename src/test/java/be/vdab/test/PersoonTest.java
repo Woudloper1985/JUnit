@@ -43,11 +43,11 @@ class PersoonTest {
     void toStringGeeftDeVoornamenMetSpatiesTussenEnInDeJuisteVolgorde() {
         persoon.add("Jan");
         persoon.add("Piet");
-        persoon.add("Abdul");
+        persoon.add("Abdul ");
         persoon.add("Jean-Pierre");
-        persoon.add("X   Æ A-12");
+        persoon.add("  X   Æ A-12");
 
         // Controleer of de voornamen in de juiste volgorde komen
-        assertThat(persoon.toString()).isEqualTo("Jan Piet Abdul Jean-Pierre X   Æ A-12");
+        assertThat(persoon.toString()).isEqualTo("Jan Piet Abdul  Jean-Pierre   X   Æ A-12");
     }
 }
