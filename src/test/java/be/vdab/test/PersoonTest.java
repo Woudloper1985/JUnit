@@ -50,4 +50,9 @@ class PersoonTest {
         // Controleer of de voornamen in de juiste volgorde komen
         assertThat(persoon.toString()).isEqualTo("Jan Piet Abdul  Jean-Pierre   X   Æ A-12");
     }
+
+    @Test
+    void legeSetGeeftLegeStringTerug(){
+        assertThat(persoon.toString()).isEqualTo("");
+    }
 }
