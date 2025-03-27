@@ -1,5 +1,5 @@
 package be.vdab.test;
-
+//test 3
 class Voornamen { // Productieklasse is niet nodig; is meer als extra oefening voor mezelf.
     public static void main(String[] args) {
         Persoon persoon = new Persoon();
